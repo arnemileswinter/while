@@ -22,5 +22,3 @@ main = runCommand $ \opts _ -> do
             p <- readProgramHandle h
             putStrLn fn
             run p
-    -- p <- 
-    -- putStrLn $ prettyMemory $ interpret p

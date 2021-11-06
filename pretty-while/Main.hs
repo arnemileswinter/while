@@ -30,4 +30,3 @@ main = runCommand $ \opts _ -> do
                    outPretty (wh) p
                    hClose wh
                 else outPretty stdout p
-    --readProgramStdIn >>= outPretty (stdout)
