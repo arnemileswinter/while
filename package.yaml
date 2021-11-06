@@ -1,0 +1,32 @@
+name: while
+version: 0.1.0.0
+synopsis: interpreter for the while programming language
+maintainer: Arne Winter
+github: arnemileswinter/while
+category: Development
+
+dependencies:
+  - base >= 4.7 && < 5
+  - attoparsec
+  - containers
+  - text
+  - transformers
+
+ghc-options: -Wall
+
+library:
+    source-dirs: src/
+
+executables:
+  do-while:
+    main: Main.hs
+    source-dirs: do-while
+    dependencies:
+      - while
+      - options
+  pretty-while:
+    main: Main.hs
+    source-dirs: pretty-while
+    dependencies:
+      - while
+      - options

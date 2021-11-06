@@ -1,0 +1,69 @@
+cabal-version: 1.12
+
+name:           while
+version:        0.1.0.0
+synopsis:       interpreter for the while programming language
+category:       Development
+homepage:       https://github.com/arnemileswinter/while#readme
+bug-reports:    https://github.com/arnemileswinter/while/issues
+maintainer:     Arne Winter
+build-type:     Simple
+
+source-repository head
+  type: git
+  location: https://github.com/arnemileswinter/while
+
+library
+  exposed-modules:
+      ReadProgram
+      While
+      While.Interpreter
+      While.Parser
+      While.Pretty
+      While.While
+  other-modules:
+      Paths_while
+  hs-source-dirs:
+      src/
+  ghc-options: -Wall
+  build-depends:
+      attoparsec
+    , base >=4.7 && <5
+    , containers
+    , text
+    , transformers
+  default-language: Haskell2010
+
+executable do-while
+  main-is: Main.hs
+  other-modules:
+      Paths_while
+  hs-source-dirs:
+      do-while
+  ghc-options: -Wall
+  build-depends:
+      attoparsec
+    , base >=4.7 && <5
+    , containers
+    , options
+    , text
+    , transformers
+    , while
+  default-language: Haskell2010
+
+executable pretty-while
+  main-is: Main.hs
+  other-modules:
+      Paths_while
+  hs-source-dirs:
+      pretty-while
+  ghc-options: -Wall
+  build-depends:
+      attoparsec
+    , base >=4.7 && <5
+    , containers
+    , options
+    , text
+    , transformers
+    , while
+  default-language: Haskell2010
