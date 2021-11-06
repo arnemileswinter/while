@@ -2,7 +2,7 @@
 
 This is an interpreter for the WHILE programming language.
 
-See **Releases** to get the latest version.
+See [Releases](https://github.com/arnemileswinter/while/releases) to get the latest version.
 
 ## Language
 
